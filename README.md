@@ -1,6 +1,6 @@
 # Carrot
 
-A pure Rust tiling Wayland compositor, built on [Smithay](https://github.com/Smithay/smithay). Carrot aims to be a feature-complete, all-in-one compositor with native support for blur, animations, multi-GPU, tearing, and more - no scripting or external tools needed.
+A pure Rust tiling Wayland compositor with a Vulkan rendering pipeline. Carrot aims to be a feature-complete, all-in-one compositor with native support for blur, animations, multi-GPU, tearing, and more - no scripting or external tools needed.
 
 > [!WARNING]
 > Carrot is in extremely early development and is not yet usable. Any contributions, suggestions, or feedback are welcome.
@@ -150,14 +150,14 @@ nix build github:flammablebunny/carrot
 cargo build --release
 ```
 
-System dependencies: `libdrm`, `libinput`, `libseat`, `mesa` (EGL/GLES), `gbm`, `libxkbcommon`, `wayland-protocols`
+System dependencies: `vulkan-loader`, `libdrm`, `libinput`, `libseat`, `libxkbcommon`, `wayland-protocols`
 
 ## Acknowledgments
 
-Carrot is built on the work of:
-- [Smithay](https://github.com/Smithay/smithay) - the Wayland compositor library that helps makes this project possible
-- [Niri](https://github.com/niri-wm/niri) - reference for rendering, animations, and proper Smithay practices
-- [Jay](https://github.com/mahkoh/jay) - reference for tearing and multi-GPU implementation
+Carrot is built from scratch, with no framework or compositor library dependency. References and inspiration:
+- [Jay](https://github.com/mahkoh/jay) - proved a from-scratch Vulkan Wayland compositor in Rust is viable for a solo dev
+- [Niri](https://github.com/niri-wm/niri) - reference for animation design and window rules
+- [ash](https://github.com/ash-rs/ash) - Vulkan bindings for Rust
 
 ## License
 
