@@ -162,3 +162,7 @@ Carrot is built on the work of:
 ## License
 
 GPL-3.0 - see [LICENSE](LICENSE) for details.
+
+## Communtity, Dev Discussions, and Support
+
+[Discord Server](https://discord.gg/fQyxq4JHpR)
